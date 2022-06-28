@@ -1,2 +1,2 @@
 # Projects
- This folder contains all of the projects of partaken on my own time.
+ This folder contains all of the projects I've partaken in on my own time.
