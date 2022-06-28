@@ -8,5 +8,12 @@
 #_________________
 
 
-for x in range(5):
-	print('U+1F47D' * x)
+#for x in range(5):
+#	print('U+1F47D' * x)
+
+colors = ['red','pink','blue']
+i = 0
+
+while i < len(colors):
+	print(colors[i])
+	i +=1

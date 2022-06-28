@@ -1,8 +1,5 @@
 from random import randint
 
-print('Rock....')
-print('Paper...')
-print('Scissors...')
 
 
 #-----------------------------------------
@@ -32,35 +29,63 @@ print('Scissors...')
 #-----------------------------------------
 
 
+win1 = 0
+win2 = 0
 
+while win1 < 3 and win2 < 3:  #3 is number of wins
+	print(f'Player: {win1}  Computer: {win2}')
+	print('Rock....')
+	print('Paper...')
+	print('Scissors...')
 
-player = input("Player, make your move: ").lower()
-rand_num = randint(0,2)
-if rand_num == 0:
-	computer = "rock"
-elif rand_num == 1:
-	computer = "paper"
+	player = input("Player, make your move: ").lower()
+	if player == 'quit' or player == 'q':
+		break	
+	rand_num = randint(0,2)
+	if rand_num == 0:
+		computer = "rock"
+	elif rand_num == 1:
+		computer = "paper"
+	else:
+		computer = "scissors"
+
+	print(f"Computer plays {computer}" )
+
+	if player == computer:
+		print("It's a tie!")
+	elif player == "rock":
+		if computer == "scissors":
+			print("player wins!")
+			win1 += 1
+		else:
+			print("computer wins!")
+			win2 += 1
+	elif player == "paper":
+		if computer == "rock":
+			print("player wins!")
+			win1 += 1
+		else:
+			print("computer wins!")
+			win2 += 1
+	elif player == "scissors":
+		if computer == "paper":
+			print("player wins!")
+			win1 += 1
+		else:
+			print("computer wins!")	
+			win2 += 1
+	else:
+		print("Please enter a valid move!")
+if win1 > win2:
+	print('Congrats you win!')
+elif win1 == win2:
+	print('No one won!')
 else:
-	computer = "scissors"
+	print('Sorry, the Computer won!')
 
-print(f"Computer plays {computer}" )
+#___________________
+#IMPROVED
 
-if player == computer:
-	print("It's a tie!")
-elif player == "rock":
-	if computer == "scissors":
-		print("player wins!")
-	else:
-		print("computer wins!")
-elif player == "paper":
-	if computer == "rock":
-		print("player wins!")
-	else:
-		print("computer wins!")
-elif player == "scissors":
-	if computer == "paper":
-		print("player wins!")
-	else:
-		print("computer wins!")	
-else:
-	print("Please enter a valid move!")
+
+
+

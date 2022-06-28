@@ -7,5 +7,10 @@
 #for letter in 'coffee':
 #	print(letter*10)
 
-for nums in range(0,9,2):
-	print(nums)
+#for nums in range(0,9,2):
+#	print(nums)
+
+colors = ['red', 'pink','blue']
+
+for color in colors:
+	print(color)
